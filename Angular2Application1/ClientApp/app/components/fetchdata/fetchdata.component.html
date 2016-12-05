@@ -1,0 +1,13 @@
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+
+<dx-data-grid [dataSource]="forecasts">
+    <dxi-column dataField="dateFormatted" caption="Date" width="100"></dxi-column>
+    <dxi-column dataField="temperatureC" caption="Temp"></dxi-column>
+</dx-data-grid> 
+
+<dx-button (onClick)="handler()" text="Simple button"></dx-button>
